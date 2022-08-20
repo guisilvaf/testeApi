@@ -1,16 +1,26 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# import requests
+import csv
+import json
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+# api = requests.get("")  #Request para api da loja
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+def csv_convert(csv_path, json_path):  # Função para converter CSV para JSON
+    jsonData = {}  # dictionary
+
+    with open(csv_path, encoding='utf-8') as csvfile:
+        csvData = csv.DictReader(csvfile)
+
+        for rows in csvData:  # Converter cada coluna do dictionary
+            key = rows.get("Codigo interno")
+            jsonData[key] = rows
+
+    with open(json_path, 'w', encoding='utf-8') as jsonfile:
+        jsonfile.write(json.dumps(jsonData, indent=5))
+
+
+# Chamando os arquivos de cada extensão
+csv_path = r'items.csv'
+json_path = r'itemList.json'
+
+csv_convert(csv_path, json_path)  # Chamando a função
