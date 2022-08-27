@@ -1,5 +1,5 @@
 {
-  "Codigo;Codigo_barras;Nome;Preco_regular;Promocao;Data_termino;Promocao;Estoque;Ativo\n": null,
+  "Codigo;Codigo_barras;Nome;Preco_regular;Promocao;Termino_promocao;Estoque;Ativo\n": null,
   "11902;7,89865E+12;ACQUISSIMA Passion Natural 1,5L Com G\u00e1s;85,71962946;2,99;31/dez/22;148;False\n": null,
   "12902;;ALIM PASSARO FORTE 500g PAPAGAIO;14,96188176;8,9;31/dez/22;447;False\n": null,
   "604;604;Abacate Avocado Kg;52,66207448;0;31/out/22;751;False\n": null,
