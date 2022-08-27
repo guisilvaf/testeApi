@@ -1,26 +1,17 @@
-# import requests
-import csv
+import requests
 import json
 
 
-# api = requests.get("")  #Request para api da loja
+# api = requests.get("")  #Request para pegar a api da loja
 
-def csv_convert(csv_path, json_path):  # Função para converter CSV para JSON
-    jsonData = {}  # dictionary
+data = open("items.csv", 'r', encoding='utf-8').readlines()
+dictionary = dict.fromkeys(data)
 
-    with open(csv_path, encoding='utf-8') as csvfile:
-        csvData = csv.DictReader(csvfile)
-
-        for rows in csvData:  # Converter cada coluna do dictionary
-            key = rows.get("Codigo interno")
-            jsonData[key] = rows
-
-    with open(json_path, 'w', encoding='utf-8') as jsonfile:
-        jsonfile.write(json.dumps(jsonData, indent=5))
+with open(r'data.json', 'w', encoding='utf-8') as file:
+    json.dump(dictionary, file, indent=2)
 
 
-# Chamando os arquivos de cada extensão
-csv_path = r'items.csv'
-json_path = r'itemList.json'
+#print(data)
+print(type(dictionary))
 
-csv_convert(csv_path, json_path)  # Chamando a função
+# requests.post("", data={}) #Request para enviar informações para a API

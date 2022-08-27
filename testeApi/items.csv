@@ -1,4 +1,4 @@
-Codigo interno;Codigo de barras;Nome;Preco regular;Promocao;Data termino promocao;estoque;ativo
+Codigo;Codigo_barras;Nome;Preco_regular;Promocao;Data_termino;Promocao;Estoque;Ativo
 11902;7,89865E+12;ACQUISSIMA Passion Natural 1,5L Com Gás;85,71962946;2,99;31/dez/22;148;False
 12902;;ALIM PASSARO FORTE 500g PAPAGAIO;14,96188176;8,9;31/dez/22;447;False
 604;604;Abacate Avocado Kg;52,66207448;0;31/out/22;751;False
