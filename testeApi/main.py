@@ -1,6 +1,6 @@
 import requests
 import json
-import datetime
+from datetime import datetime
 
 
 # api = requests.get("Zj7P7qnkl-D9fRIpMyjFB5iLaK0qVYFTiYEHk1Vj4j8")  #Request para pegar a api da loja.
@@ -16,6 +16,9 @@ def floatPrice():
     for price in dictionary['item']:
         round(['Preco_regular'], 2) #Arredondando o preço para 2 casas decimais
         float(['Preco_regular']) #Transformando o preço em float
+        json.dump(dictionary, price)
+
+floatPrice()
 
 
 '''requests.put("Zj7P7qnkl-D9fRIpMyjFB5iLaK0qVYFTiYEHk1Vj4j8", dictionary={'internal_code':'Codigo', 'name':'Nome', 'price':'Preco_regular', 'visible':'Ativo',
